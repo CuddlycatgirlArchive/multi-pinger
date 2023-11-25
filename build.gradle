@@ -1,0 +1,34 @@
+/* Gradle plugins */
+plugins {
+    id 'java'
+}
+
+/* Gradle project configuration */
+group = 're.goober.pinger'
+version = '1.0-SNAPSHOT'
+
+/* Repositories */
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://maven.lenni0451.net/releases"
+    }
+}
+
+/* Dependencies */
+dependencies {
+    // Apache CLI Commons
+    implementation 'commons-cli:commons-cli:1.6.0'
+
+    // RClasses pattern module
+    implementation "de.florianmichael.rclasses:pattern:2.3.3"
+
+    // Lombok
+    implementation 'org.projectlombok:lombok:1.18.30'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    // Log4j
+    implementation 'org.apache.logging.log4j:log4j-core:2.21.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.21.1'
+}
